@@ -1,0 +1,82 @@
+/* pages/faxian/faxian.wxss */
+.faxian {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 92rpx;
+}
+.every_data {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.data_content {
+  width: 90%;
+  height: 100%;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  position: relative;
+  /* margin: 20rpx 30rpx; */
+}
+.data_image {
+  width: 100%;
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+  margin-bottom: 0rpx;
+  /* height: 200rpx; */
+  max-height: 200rpx;
+}
+.data_text {
+  font-size: 30rpx;
+  margin-left: 3%;
+}
+.work_name {
+  margin-bottom: 1%;
+  font-weight: bold;
+  font-size: 33rpx;
+}
+.work_user {
+  margin-bottom: 20rpx;
+  font-size: 25rpx;
+  color: #808080;
+  margin-top: 20rpx;
+}
+.work_delete {
+  position: absolute;
+  bottom: 20rpx;
+  right: 10rpx;
+  color: red;
+  font-size: 25rpx;
+}
+.add_button {
+  /* background-color: white; */
+  position: fixed;
+  bottom: 100rpx;
+  /* opacity: 0.7; */
+  /* padding: 20rpx 30rpx; */
+  /* border-radius: 50%; */
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100rpx;
+  height: 100rpx;
+}
+.no_work {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.no_work_img {
+  width: 150rpx;
+  height: 150rpx;
+}
+.no_work_title {
+  margin-top: 20rpx;
+  color: #808080;
+}

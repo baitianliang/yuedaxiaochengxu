@@ -1,0 +1,28 @@
+<!--pages/startAudio/startAudio.wxml-->
+
+<view class="top">
+  <view>播放</view>
+</view>
+<view class="start_audio">
+  <video 
+    id="myVideo" 
+    src="{{form.workContent}}" 
+    initial-time='0.01'
+  ></video>
+  <view class="start_audio_content_head">
+    <view class="head_left">
+      <image class="head_image" src="../../img/icon/no_photo.jpg"></image>
+      <view>
+        <view class="work">{{form.workName}}</view>
+        <view class="name">{{form.workTag}}</view>
+      </view>
+    </view>
+    <view class="head_right" bindtap="compile">编辑</view>
+  </view>
+  <view class="start_audio_content_foot">
+    <view class="work_content_text">作品号：{{form.workNum ? form.workNum : '无'}}</view>
+    <view class="work_content_text">作曲家：{{form.workAuthor ? form.workAuthor : '无'}}</view>
+    <view class="work_content_text">乐段乐章：{{form.workArticle ? form.workArticle : '无'}}</view>
+    <view wx:if="{{ page === 1 }}" class="work_content_text">教学教师：{{form.enrollTeacher}}</view>
+  </view>
+</view>

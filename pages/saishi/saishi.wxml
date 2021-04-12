@@ -1,0 +1,11 @@
+<!--pages/saishi/saishi.wxml-->
+<view class="top">
+  <view>赛事</view>
+</view>
+<view class="saishi">
+  <view wx:for="{{dataList}}" wx:key="index" bindtap="details" data-activityId="{{item.activityId}}" class="every_data">
+    <image class="data_image" src="{{item.activityAvatar}}"></image>
+    <view class="data_title">{{item.activityName}}</view>
+    <view class="data_time">报名截止时间: {{item.activityStartTime}}</view>
+  </view>
+</view>

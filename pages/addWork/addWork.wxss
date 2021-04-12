@@ -1,0 +1,58 @@
+/* pages/shezhi/shezhi.wxss */
+.user_setting {
+  background-color: white;
+  padding: 20rpx 0rpx;
+  padding-top: 92rpx;
+}
+#myVideo {
+  width: 100%;
+  height: 400rpx;
+}
+.delete_work {
+  color: red;
+  font-size: 25rpx;
+  margin-right: 20rpx;
+  text-align: right;
+}
+.upload_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160rpx;
+  height: 160rpx;
+}
+.upload_image {
+  width: 80rpx;
+}
+.user_line {
+  display: flex;
+  align-items: center;
+  margin: 0rpx 20rpx;
+  padding: 20rpx 0rpx;
+  width: auto;
+  border-bottom: 1rpx solid #ccc;
+}
+.user_avatar {
+  width: 160rpx;
+  height: 160rpx;
+}
+/* .user_form {
+} */
+.label {
+  width: 30%;
+}
+.placeholder {
+  color: #888;
+}
+.login_button {
+  margin-top: 50rpx;
+  padding: 20rpx;
+  width: 70%!important;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+  background-color: #ff976a;
+  color: white;
+}
+.login_button:active {
+  opacity: 0.7;
+}

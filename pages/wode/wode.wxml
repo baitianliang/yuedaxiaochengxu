@@ -1,0 +1,59 @@
+<!--pages/wode/wode.wxml-->
+<view class="top">
+  <view>我的</view>
+</view>
+<view class="wode">
+  <view class="wode_height">
+    <image class="height_image" src="../../img/header.png"></image>
+    <view class="wode_height_left">
+      <image wx:if="{{form.userAvatar}}" class="user_img" src="{{form.userAvatar}}"></image>
+      <image wx:else class="user_img" src="../../img/icon/no_photo.jpg"></image>
+      <view class="user_content">
+        <view>{{form.userName}}</view>
+        <view>{{userRole.roleId == 1 ? '学生' : '专家'}}</view>
+      </view>
+    </view>
+    <view class="wode_height_right">
+      <view class="quit_button" bindtap="quit">退出登录</view>
+      <view class="update_button" bindtap="update"><view class="update_icon">?</view>修改密码</view>
+    </view>
+  </view>
+  <view class="wode_data">
+    <view class="data_everyone" bindtap="order">
+      <image class="data_icon" src="../../img/icon/dingdan@2x.png"></image>
+      <view class="data_every_content">
+        <view class="data_left">
+          <view>我的订单</view>
+        </view>
+        <image class="data_right" src="../../img/icon/youjiantou.png"></image>
+      </view>
+    </view>
+    <view class="data_everyone" bindtap="video">
+      <image class="data_icon shipin" src="../../img/icon/shipin@2x.png"></image>
+      <view class="data_every_content">
+        <view class="data_left">
+          <view>我的视频</view>
+        </view>
+        <image class="data_right" src="../../img/icon/youjiantou.png"></image>
+      </view>
+    </view>
+    <view class="data_everyone" bindtap="activity">
+      <image class="data_icon" src="../../img/icon/cansai@2x.png"></image>
+      <view class="data_every_content">
+        <view class="data_left">
+          <view>我的参赛</view>
+        </view>
+        <image class="data_right" src="../../img/icon/youjiantou.png"></image>
+      </view>
+    </view>
+    <view class="data_everyone" bindtap="setting">
+      <image class="data_icon" src="../../img/icon/shezhi.png"></image>
+      <view class="data_every_content">
+        <view class="data_left">
+          <view>个人设置</view>
+        </view>
+        <image class="data_right" src="../../img/icon/youjiantou.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

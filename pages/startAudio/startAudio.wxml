@@ -1,0 +1,77 @@
+<!--pages/startAudio/startAudio.wxml-->
+
+<view class="top">
+  <view>播放</view>
+</view>
+<view class="start_audio">
+  <video 
+    id="myVideo" 
+    src="{{form.workContent}}" 
+    initial-time='0.01'
+  ></video>
+  <view class="start_audio_content_head">
+    <view class="head_left">
+      <image class="head_image" src="../../img/icon/no_photo.jpg"></image>
+      <view>
+        <view class="work">{{form.workName}}</view>
+        <view class="name">{{form.workTag}}</view>
+      </view>
+    </view>
+    <view class="head_right">
+      <image class="show_number_move_icon" src="../../img/icon/bofangcishu.png"></image>
+      <view class="show_number">{{form.workView}}</view>
+      <image bindtap="likeWork" wx:if="{{!like}}" class="show_number_icon" src="../../img/icon/nolike.png"></image>
+      <image wx:else class="show_number_icon" src="../../img/icon/like.png"></image>
+      <view class="show_number">{{form.workHit}}</view>
+    </view>
+  </view>
+  <view class="start_audio_content_foot">
+    <view class="work_content_text">作品号：{{form.workNum ? form.workNum : '无'}}</view>
+    <view class="work_content_text">作曲家：{{form.workAuthor ? form.workAuthor : '无'}}</view>
+    <view class="work_content_text">乐段乐章：{{form.workArticle ? form.workArticle : '无'}}</view>
+    <view wx:if="{{ page === 1 }}" class="work_content_text">教学教师：{{form.enrollTeacher}}</view>
+  </view>
+  <view class="score_content" wx:if="{{ page === 1 }}">
+    <view class="score">
+      <view>评分</view>
+      <view>
+        <image class="image" src="../../img/icon/wujiaoxing.png"></image>
+        {{form.average}}
+      </view>
+    </view>
+    <view class="score_list">
+      <view class="score_data">
+        <view>技术水平：</view>
+        <van-rate readonly allow-half count="{{ 7 }}" value="{{ form.item1 }}" bind:change="onChange" />
+      </view>
+      <view class="score_data">
+        <view>规格规范：</view>
+        <van-rate readonly allow-half count="{{ 7 }}" value="{{ form.item2 }}" bind:change="onChange" />
+      </view>
+      <view class="score_data">
+        <view>音乐表现：</view>
+        <van-rate readonly allow-half count="{{ 7 }}" value="{{ form.item3 }}" bind:change="onChange" />
+      </view>
+      <view class="score_data">
+        <view>基础能力：</view>
+        <van-rate readonly allow-half count="{{ 7 }}" value="{{ form.item4 }}" bind:change="onChange" />
+      </view>
+    </view>
+    <view class="score_footer">
+      <view>汇总评星：{{form.average}}颗</view>
+      <view class="score_result">比赛结果：<view style="color: darkorange">{{ form.average >= form.activityPassScore ? '晋级' : '未晋级' }}</view></view>
+    </view>
+    <view class="score_teacher">
+      <view wx:for="{{scoreList}}" wx:key="index">
+        <view class="score_teacher_top">
+          <view class="score_teacher_top_left">
+            <image class="teacher_image" src="{{item.userAvatar}}"></image>
+            <view>{{item.trueName}}</view>
+          </view>
+          <view>{{item.scoreCreateTime}}</view>
+        </view>
+        <view class="score_comment">{{item.scoreComment}}</view>
+      </view>
+    </view>
+  </view>
+</view>

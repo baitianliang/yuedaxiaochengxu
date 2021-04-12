@@ -1,0 +1,139 @@
+/* pages/shezhi/shezhi.wxss */
+.user_setting {
+  background-color: white;
+  padding: 20rpx 0rpx;
+  padding-top: 92rpx;
+}
+.user_line {
+  display: flex;
+  align-items: center;
+  margin: 0rpx 20rpx;
+  padding: 20rpx 0rpx;
+  width: auto;
+  border-bottom: 1rpx solid #ccc;
+  color: #c8c9cc;
+}
+.user_checkbox {
+  margin: 0rpx 20rpx;
+  color: darkorange;
+}
+/* .user_avatar {
+}
+.user_form {
+} */
+.label {
+  width: 30%;
+}
+.placeholder {
+  color: #888;
+}
+.login_button {
+  margin-top: 50rpx;
+  padding: 20rpx;
+  width: 70%!important;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+  background-color: #ff976a;
+  color: white;
+}
+.login_button:active {
+  opacity: 0.7;
+}
+#myVideo {
+  width: 100%;
+  height: 400rpx;
+}
+.start_audio_content_head {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+}
+.head_left {
+  display: flex;
+  margin-top: 10rpx;
+}
+.head_image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  margin-left: 10rpx;
+}
+.work {
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 40rpx;
+}
+.name {
+  font-size: 25rpx;
+  line-height: 40rpx;
+}
+.head_right {
+  font-size: 25rpx;
+  margin-right: 50rpx;
+  margin-top: 20rpx;
+  color: #ff976a;
+}
+.show_number_icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.show_number {
+  font-size: 25rpx;
+  line-height: 40rpx;
+  margin-right: 20rpx;
+}
+.start_audio_content_foot {
+  padding-top: 70rpx;
+  padding-left: 20rpx;
+  padding-bottom: 15rpx;
+  background: #ffffff;
+}
+.work_content_text {
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+
+.dialog {
+  /* height: 100%; */
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.every_data {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.data_content {
+  width: 90%;
+  height: 100%;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  box-shadow: 5rpx 5rpx 10rpx #eee;
+  /* margin: 20rpx 30rpx; */
+}
+.check {
+  border: 1px solid #ff8c00;
+}
+.data_image {
+  width: 94%;
+  margin: 3%;
+  /* border-radius: 20rpx 20rpx 0rpx 0rpx; */
+  height: 200rpx;
+}
+.data_text {
+  font-size: 30rpx;
+  margin-left: 3%;
+  display: flex;
+  font-weight: bold;
+}
+.work_name {
+  margin-bottom: 1%;
+}
+.work_user {
+  margin-bottom: 20rpx;
+}

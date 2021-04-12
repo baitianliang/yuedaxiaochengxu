@@ -1,0 +1,33 @@
+<!--pages/login/login.wxml-->
+<!-- <text>pages/login/login.wxml</text> -->
+
+<view class="top">
+  <view>注册</view>
+</view>
+<view class="login">
+  <image class="login_image" src="/img/icon/logo@2x.png"></image>
+  <view class="login_form">
+    <image class="login_form_icon" src="/img/icon/phone.png"></image>
+    <input class="login_form_input" name="input" placeholder="请输入手机号" bindinput="saveUserName" />
+  </view>
+  <view class="login_form">
+    <image class="login_form_icon" src="/img/icon/zuanshi.png"></image>
+    <input maxlength="6" class="login_form_input login_form_input_button" name="input" placeholder="请输入短信验证码" bindinput="saveCode" />
+    <view wx:if="{{loading}}" class="login_form_button_loading">{{getCode}}</view>
+    <view wx:else class="login_form_button" bindtap="getCode">获取验证码</view>
+  </view>
+  <view class="login_form">
+    <image class="login_form_icon" src="/img/icon/suo.png"></image>
+    <input maxlength="12" type="password" class="login_form_input" name="input" placeholder="请输入6-12位数字/字母的密码" bindinput="savePassWord" />
+  </view>
+  <view class="login_form">
+    <image class="login_form_icon" src="/img/icon/suo.png"></image>
+    <input maxlength="12" type="password" class="login_form_input" name="input" placeholder="请输入再次输入密码" bindinput="saveNextPassWord" />
+  </view>
+  <view class="login_form">
+    <image class="login_form_icon" src="/img/icon/yonghu.png"></image>
+    <input class="login_form_input" name="input" placeholder="请输入真实姓名" bindinput="saveTrueName" />
+  </view>
+  <view class="login_text">注册即代表同意《乐答在线服务协议》</view>
+  <button class="login_button" bindtap="newUser">注册</button>
+</view>

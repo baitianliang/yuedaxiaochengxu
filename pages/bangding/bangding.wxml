@@ -1,0 +1,104 @@
+<!--pages/shezhi/shezhi.wxml-->
+<view class="top">
+  <view>播放</view>
+</view>
+<view class="user_setting">
+  <view class="user_line">
+    <view class="label">姓名</view>
+    <view class="user_form">{{form.enrollTrueName?form.enrollTrueName:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">性别</view>
+    <view class="user_form">{{array[form.enrollSex]}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">市\省\自治区</view>
+    <view class="user_form">{{form.enrollProvinceName?form.enrollProvinceName:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">省辖市</view>
+    <view class="user_form">{{form.enrollCityName?form.enrollCityName:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">区\县</view>
+    <view class="user_form">{{form.enrollDistrictName?form.enrollDistrictName:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">居住地</view>
+    <view class="user_form">{{form.enrollAddr?form.enrollAddr:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">出生日期</view>
+    <view class="user_form">{{ form.enrollBirthday }}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">开始学琴时间</view>
+    <view class="user_form">{{form.enrollStudyTime}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">身份证号</view>
+    <view class="user_form">{{form.enrollIdCard?form.enrollIdCard:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">联系方式</view>
+    <view class="user_form">{{form.enrollPhone?form.enrollPhone:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">邮箱</view>
+    <view class="user_form">{{form.enrollMail?form.enrollMail:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">推荐机构名称</view>
+    <view class="user_form">{{form.enrollGov?form.enrollGov:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">指导教师姓名</view>
+    <view class="user_form">{{form.enrollTeacher?form.enrollTeacher:''}}</view>
+  </view>
+  <view class="user_line">
+    <view class="label">指导教师电话</view>
+    <view class="user_form">{{form.enrollTeacherPhone?form.enrollTeacherPhone:''}}</view>
+  </view>
+  <view wx:if="{{form.workContent}}">
+    <video 
+      id="myVideo" 
+      src="{{form.workContent}}" 
+      initial-time='0.01'
+    ></video>
+    <view class="start_audio_content_head">
+      <view class="head_left">
+        <image class="head_image" src="../../img/icon/no_photo.jpg"></image>
+        <view>
+          <view class="work">{{form.workName}}</view>
+          <view class="name">{{form.workTag}}</view>
+        </view>
+      </view>
+      <view class="head_right" bindtap="updateInfo">更换</view>
+    </view>
+    <view class="start_audio_content_foot">
+      <view class="work_content_text">作品号：{{form.workNum ? form.workNum : '无'}}</view>
+      <view class="work_content_text">作曲家：{{form.workAuthor ? form.workAuthor : '无'}}</view>
+      <view class="work_content_text">乐段乐章：{{form.workArticle ? form.workArticle : '无'}}</view>
+      <view wx:if="{{ page === 1 }}" class="work_content_text">教学教师：{{form.enrollTeacher}}</view>
+    </view>
+  </view>
+</view>
+<van-dialog
+  use-slot
+  title="绑定作品"
+  show="{{ show }}"
+  show-cancel-button
+  bind:confirm="conHandle"
+  confirm-button-color="#1989fa">
+  <view class="dialog">
+    <view wx:for="{{dataList}}" wx:key="index" class="every_data" bindtap="checkWork" data-workId="{{item.workId}}" data-index="{{index}}">
+      <view class="data_content" class="{{active==index?'data_content check':'data_content'}}">
+        <image class="data_image" src="{{item.workAvatar}}"></image>
+        <view class="data_text">
+          <view class="work_user">{{item.workAuthor}}  {{item.workName}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</van-dialog>
+<button wx:if="{{!form.workContent}}" class="login_button" bindtap="updateInfo">绑定作品</button>

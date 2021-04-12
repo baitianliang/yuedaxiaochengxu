@@ -1,0 +1,130 @@
+<!--pages/shezhi/shezhi.wxml-->
+<view class="top">
+  <view>填写报名信息</view>
+</view>
+<view class="user_setting">
+  <view class="user_line">
+    <view class="label">姓名</view>
+    <input class="user_form" value="{{form.enrollTrueName}}" name="input" placeholder="请填写真实姓名" bindinput="saveform" data-name="enrollTrueName" />
+  </view>
+  <view class="user_line">
+    <view class="label">性别</view>
+    <picker class="user_form" bindchange="bindPickerChange" value="{{form.enrollSex}}" range="{{ array }}">
+      <view wx:if="{{form.enrollSex}}" class="picker">
+        {{array[form.enrollSex]}}
+      </view>
+      <view wx:else class="placeholder">
+        请选择性别
+      </view>
+    </picker>
+  </view>
+  <view class="user_line">
+    <view class="label">组别</view>
+    <picker class="user_form" bindchange="activityLevelChange" value="{{activityLevelIndex}}" range-key="activityLevelName" range="{{ activityLevelList }}">
+      <view wx:if="{{form.enrollActivityLevelId}}" class="picker">
+        {{activityLevelList[activityLevelIndex].activityLevelName}}
+      </view>
+      <view wx:else class="placeholder">
+        请选择组别
+      </view>
+    </picker>
+  </view>
+  <view class="user_line">
+    <view class="label">市\省\自治区</view>
+    <picker class="user_form" bindchange="provinceChange" value="{{provinceIndex}}" range-key="provinceName" range="{{ provinceList }}">
+      <view wx:if="{{form.enrollProvinceId}}" class="picker">
+        {{form.enrollProvinceName}}
+      </view>
+      <view wx:else class="placeholder">
+        请选择直辖市、省、自治区
+      </view>
+    </picker>
+  </view>
+  <view class="user_line">
+    <view class="label">省辖市</view>
+    <picker class="user_form" bindchange="cityChange" value="{{cityIndex}}" range-key="cityName" range="{{ cityList }}">
+      <view wx:if="{{form.enrollCityId}}" class="picker">
+        {{form.enrollCityName}}
+      </view>
+      <view wx:else class="placeholder">
+        请选择省辖市
+      </view>
+    </picker>
+  </view>
+  <view class="user_line">
+    <view class="label">区\县</view>
+    <picker class="user_form" bindchange="districtChange" value="{{districtIndex}}" range-key="districtName" range="{{ districtList }}">
+      <view wx:if="{{form.enrollDistrictId}}" class="picker">
+        {{form.enrollDistrictName}}
+      </view>
+      <view wx:else class="placeholder">
+        请选择区\县\县级市\旗
+      </view>
+    </picker>
+  </view>
+  <view class="user_line">
+    <view class="label">居住地</view>
+    <input class="user_form" value="{{form.enrollAddr}}" name="input" placeholder="请填写居住地" bindinput="saveform" data-name="enrollAddr" />
+  </view>
+  <view class="user_line">
+    <view class="label">出生日期</view>
+    <picker mode="date" value="{{form.enrollBirthday}}" start="1980-01-01" end="2020-01-01" placeholder="请选择出生日期" bindchange="saveform" data-name="enrollBirthday">
+      <view wx:if="{{form.enrollBirthday}}" class="picker">
+        {{ form.enrollBirthday }}
+      </view>
+      <view wx:else class="placeholder">
+        请选择出生日期
+      </view>
+    </picker>
+  </view>
+  <view class="user_line">
+    <view class="label">开始学琴时间</view>
+    <picker mode="date" value="{{form.enrollStudyTime}}" start="1990-01-01" end="2020-01-01" placeholder="请选择出生日期" bindchange="saveform" data-name="enrollStudyTime">
+      <view wx:if="{{form.enrollStudyTime}}" class="picker">
+        {{ form.enrollStudyTime }}
+      </view>
+      <view wx:else class="placeholder">
+        请选择开始学琴时间
+      </view>
+    </picker>
+  </view>
+  <view class="user_line">
+    <view class="label">身份证件类型</view>
+    <van-radio-group class="radio" value="{{ radio }}" bind:change="onChange">
+      <van-radio name="{{1}}">身份证</van-radio>
+      <van-radio name="{{0}}">护照</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="user_line">
+    <view class="label">{{radio ? '身份证号' : '护照'}}</view>
+    <input class="user_form" value="{{form.enrollIdCard}}" name="input" placeholder="{{radio ? '请填写身份证号' : '请填写护照'}}" bindinput="saveform" data-name="enrollIdCard" />
+  </view>
+  <view class="user_line">
+    <view class="label">身份证照片</view>
+    <van-uploader class="user_avatar" file-list="{{ fileList }}" max-count="1" bind:after-read="afterRead" bind:delete="delete"/>
+  </view>
+  <view class="user_line">
+    <view class="label">联系方式</view>
+    <input class="user_form" value="{{form.enrollPhone}}" name="input" placeholder="请填写联系方式" bindinput="saveform" data-name="enrollPhone" />
+  </view>
+  <view class="user_line">
+    <view class="label">邮箱</view>
+    <input class="user_form" value="{{form.enrollMail}}" name="input" placeholder="请填写邮箱" bindinput="saveform" data-name="enrollMail" />
+  </view>
+  <view class="user_line">
+    <view class="label">推荐机构名称</view>
+    <input class="user_form" value="{{form.enrollGov}}" name="input" placeholder="请填写推荐机构名称" bindinput="saveform" data-name="enrollGov" />
+  </view>
+  <view class="user_line">
+    <view class="label">指导教师姓名</view>
+    <input class="user_form" value="{{form.enrollTeacher}}" name="input" placeholder="请填写指导教师姓名" bindinput="saveform" data-name="enrollTeacher" />
+  </view>
+  <view class="user_line">
+    <view class="label">指导教师电话</view>
+    <input class="user_form" value="{{form.enrollTeacherPhone}}" name="input" placeholder="请填写指导教师电话" bindinput="saveform" data-name="enrollTeacherPhone" />
+  </view>
+  <view class="user_checkbox">
+    <checkbox value="{{userInfo.checkbox}}" bindtap="checkboxChange" />我已阅读并同意赛事规则及相关的所有内容
+  </view>
+</view>
+<button class="login_button" bindtap="updateInfo">提交资料</button>

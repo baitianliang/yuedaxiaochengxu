@@ -1,0 +1,15 @@
+<!--pages/faxian/faxian.wxml-->
+<view class="top">
+  <view>发现</view>
+</view>
+<view class="faxian">
+  <view wx:for="{{dataList}}" wx:key="index" class="every_data" bindtap="details" data-workId="{{item.workId}}">
+    <view class="data_content">
+      <image mode="aspectFill" class="data_image" src="{{item.workAvatar}}"></image>
+      <view class="data_text">
+        <view class="work_name">{{item.workName?item.workName:''}}</view>
+        <view class="work_user">{{item.workAuthor?item.workAuthor:''}}</view>
+      </view>
+    </view>
+  </view>
+</view>

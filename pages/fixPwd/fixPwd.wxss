@@ -1,0 +1,25 @@
+/* pages/fixPwd/fixPwd.wxss */
+.fix_pwd {
+  padding-top: 92rpx;
+}
+.line_data {
+  display: flex;
+  padding: 20rpx 20rpx;
+  background-color: white;
+  border-bottom: 1rpx solid #ddd;
+}
+.input_title {
+  width: 35%;
+}
+.login_button {
+  margin-top: 50rpx;
+  padding: 20rpx;
+  width: 70%!important;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+  background-color: #ff976a;
+  color: white;
+}
+.login_button:active {
+  opacity: 0.7;
+}

@@ -1,0 +1,18 @@
+<!--pages/saishi/saishi.wxml-->
+<view class="top">
+  <view>我的参赛</view>
+</view>
+<view wx:if="{{dataList.length>0}}" class="saishi">
+  <view wx:for="{{dataList}}" wx:key="index" bindtap="details" data-val="{{item}}" class="every_data">
+    <image mode="aspectFit" class="activity_image" src="{{item.activityAvatar}}"></image>
+    <view class="activity_data">
+      <view class="activity_name">{{item.activityName}}</view>
+      <view class="activity_type">{{!item.orderId?'待缴费':(!item.workId?'待上传作品':(item.workStatus=='inactive'?'作品待审核':(item.workStatus=='delete'?'作品未通过审核请重新上传':'已完成')))}}</view>
+      <view class="activity_time">报名时间: {{item.enrollCreateTime}}</view>
+    </view>
+  </view>
+</view>
+<view class="no_work" wx:else>
+  <image class="no_work_img" src="../../img/icon/noactivity.png"></image>
+  <view class="no_work_title">暂无参与赛事</view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/faxian/faxian.wxml-->
+<view class="top">
+  <view>我的视频</view>
+</view>
+<view wx:if="{{dataList.length>0}}" class="faxian">
+  <view wx:for="{{dataList}}" wx:key="index" class="every_data" bindtap="details" data-workId="{{item.workId}}">
+    <view class="data_content">
+      <image mode="aspectFill" class="data_image" src="{{item.workAvatar}}"></image>
+      <view class="data_text">
+        <view class="work_name">{{item.workName}}</view>
+        <view class="work_user">{{item.workCreateTime||''}}</view>
+      </view>
+      <view class="work_delete" catchtap="deleteWork" hover-stop-propagation="true" data-workId="{{item.workId}}">删除</view>
+    </view>
+  </view>
+  <!-- <view class="add_button" bindtap="addWork">添加</view> -->
+</view>
+<view class="no_work" wx:else>
+  <image class="no_work_img" src="../../img/icon/nowork.png"></image>
+  <view class="no_work_title">暂无上传视频</view>
+</view>
+<image class="add_button" bindtap="addWork" src="../../img/icon/addwork.png"></image>

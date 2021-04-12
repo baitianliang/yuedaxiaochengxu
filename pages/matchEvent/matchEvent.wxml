@@ -1,0 +1,18 @@
+<!--pages/matchEvent/matchEvent.wxml-->
+<view class="top">
+  <view>赛事详情</view>
+</view>
+<view class="match_event">
+  <view class="head">
+    <view class="{{even ? 'head_title_tag' : 'head_title'}}" bindtap="changeEven">赛事介绍</view>
+    <view class="{{even ? 'head_title' : 'head_title_tag'}}" bindtap="changeApply">报名须知</view>
+  </view>
+  <view class="content">
+    <image class="image" mode='widthFix' wx:for="{{pic}}" wx:key="index" src="{{item}}"></image>
+  </view>
+  <view class="footer">
+    <view wx:if="{{apply}}" bindtap="enroll" class="footer_button_apply">立即报名</view>
+    <view wx:else class="footer_button_apply_end">报名结束</view>
+    <view bindtap="getWorks" class="footer_button_work">参赛作品</view>
+  </view>
+</view>

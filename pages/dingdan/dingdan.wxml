@@ -1,0 +1,21 @@
+<!--pages/dingdan/dingdan.wxml-->
+<view class="top">
+  <view>我的订单</view>
+</view>
+<view wx:if="{{orderList.length>0}}" class="dingdan">
+  <view class="order" wx:for="{{orderList}}" wx:key="index">
+    <view class="order_id">订单编号：{{item.orderEnrollId}}</view>
+    <view class="order_center">
+      <view class="order_name">{{item.activityLevelName}}+{{item.activityName}}</view>
+      <view>￥{{item.totalMoney/100}}</view>
+    </view>
+    <view class="order_footer">
+      <view>付款时间：{{item.orderCreateTime}}</view>
+      <view>实付款：￥{{item.totalMoney/100}}</view>
+    </view>
+  </view>
+</view>
+<view class="no_order" wx:else>
+  <image class="no_order_img" src="../../img/icon/noorder.png"></image>
+  <view class="no_order_title">暂无订单记录</view>
+</view>

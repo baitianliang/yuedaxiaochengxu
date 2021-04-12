@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<!-- <text>pages/login/login.wxml</text> -->
+
+<view class="top">
+  <view>登录</view>
+</view>
+<view class="login">
+  <image class="login_image" src="/img/icon/logo@2x.png"></image>
+  <view class="login_form">
+    <image class="login_form_icon" src="/img/icon/Rectangle2copy.png"></image>
+    <text class="login_form_text">用户名</text>
+    <input class="login_form_input" name="input" model:value="{{userName}}" placeholder="请输入账号" />
+  </view>
+  <view class="login_form">
+    <image class="login_form_icon" src="/img/icon/lockicon.png"></image>
+    <text class="login_form_text">密码</text>
+    <input type="password" class="login_form_input" model:value="{{passWord}}" name="input" placeholder="请输入密码" />
+  </view>
+  <button class="login_form_button" bindtap="login">登录</button>
+  <view class="text_button">
+    <text class="login_text_button" bindtap="forgetPassword">忘记密码</text>
+    <text class="login_text_button" bindtap="register">前往注册</text>
+    <text class="login_text_button" bindtap="back">回到首页</text>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/fixPwd/fixPwd.wxml-->
+<view class="top">
+  <view>修改密码</view>
+</view>
+<view class="fix_pwd">
+  <view class="line_data">
+    <view class="input_title">旧密码</view>
+    <input maxlength="12" type="password" class="input" name="input" placeholder="请输入旧密码" bindinput="saveOldPwd"/>
+  </view>
+  <view class="line_data">
+    <view class="input_title">新密码</view>
+    <input maxlength="12" type="password" class="input" name="input" placeholder="请输入新密码" bindinput="saveNewPwd"/>
+  </view>
+  <view class="line_data">
+    <view class="input_title">再次确认新密码</view>
+    <input maxlength="12" type="password" class="input" name="input" placeholder="请输入新密码" bindinput="saveConPwd"/>
+  </view>
+  <button disabled="{{disabled}}" class="login_button" bindtap="updatePaw">修改密码</button>
+</view>

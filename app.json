@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/faxian/faxian",
+    "pages/saishi/saishi",
+    "pages/wode/wode",
+    "pages/matchEvent/matchEvent",
+    "pages/login/login",
+    "pages/startAudio/startAudio",
+    "pages/register/register",
+    "pages/forget/forget",
+    "pages/logs/logs",
+    "pages/xiaoxi/xiaoxi",
+    "pages/index/index",
+    "pages/works/works",
+    "pages/fixPwd/fixPwd",
+    "pages/dingdan/dingdan",
+    "pages/shipin/shipin",
+    "pages/cansai/cansai",
+    "pages/shezhi/shezhi",
+    "pages/baoming/baoming",
+    "pages/bangding/bangding",
+    "pages/addWork/addWork",
+    "pages/workDetails/workDetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "乐答在线",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#F37D0f",
+    "list": [
+      {
+        "pagePath": "pages/faxian/faxian",
+        "text": "发现",
+        "iconPath": "/img/icon/faxian.png",
+        "selectedIconPath": "/img/icon/faxian-selected@2x.png"
+      },
+      {
+        "pagePath": "pages/saishi/saishi",
+        "text": "赛事",
+        "iconPath": "/img/icon/saishi.png",
+        "selectedIconPath": "/img/icon/saishi-selected@2x.png"
+      },
+      {
+        "pagePath": "pages/xiaoxi/xiaoxi",
+        "text": "消息",
+        "iconPath": "/img/icon/xiaoxi.png",
+        "selectedIconPath": "/img/icon/xiaoxi-selected@2x.png"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "我的",
+        "iconPath": "/img/icon/wode.png",
+        "selectedIconPath": "/img/icon/wode-selected@2x.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,87 @@
+/* pages/wode/wode.wxss */
+.wode {
+  padding-top: 92rpx;
+}
+.wode_height {
+  position: relative;
+}
+.height_image {
+  height: 400rpx;
+  width: 100%;
+  /* position: absolute;
+  z-index: 0; */
+}
+.wode_height_left {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 50rpx;
+  top: 125rpx;
+}
+.user_img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_content {
+  line-height: 50rpx;
+}
+.wode_height_right {
+  position: absolute;
+  z-index: 2;
+  right: 50rpx;
+  top: 80rpx;
+}
+.quit_button {
+  border: 1rpx solid white;
+  color: white;
+  padding: 10rpx 20rpx;
+}
+.update_button {
+  margin-top: 150rpx;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.update_icon {
+  border: 1rpx solid white;
+  border-radius: 50%;
+  padding: 0rpx 14rpx;
+  margin-top: 5rpx;
+  margin-right: 5rpx;
+}
+.wode_data {
+  background-color: white;
+}
+.data_everyone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3%;
+}
+.data_everyone:active {
+  background-color: #eeeeee;
+}
+.data_every_content {
+  width: 88%;
+  padding: 25rpx 2%;
+  border-bottom: 1rpx solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+}
+.data_left {
+  display: flex;
+  align-self: center;
+}
+.data_icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+.shipin {
+  height: 40rpx;
+}
+.data_right {
+  width: 50rpx;
+  height: 50rpx;
+}

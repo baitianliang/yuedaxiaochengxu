@@ -1,0 +1,33 @@
+<!--pages/faxian/faxian.wxml-->
+<view class="top">
+  <view>参赛作品</view>
+  <!-- <van-dropdown-menu>
+    <van-dropdown-item value="{{ value }}" options="{{ levelList }}" bind:change="changeLevel"/>
+  </van-dropdown-menu> -->
+</view>
+<view wx:if="{{showLevelList}}" class="level_list">
+  <view class="level_data" bindtap="changeLevel" data-val="{{allLevel}}">{{allLevel.activityLevelName}}</view>
+  <view class="level_data" wx:for="{{levelList}}" wx:key="index" bindtap="changeLevel" data-val="{{item}}">{{item.activityLevelName}}</view>
+</view>
+<view class="level_button" bindtap="showLevelList">{{searchLevel}}<van-icon name="arrow-down" size="20rpx" /></view>
+<view class="faxian">
+  <view wx:for="{{dataList}}" wx:key="index" class="every_data" bindtap="details" data-scoreId="{{item.scoreEnrollId}}">
+    <view class="data_content">
+      <image mode="aspectFill" class="data_image" src="{{item.workAvatar}}"></image>
+      <view class="data_text">
+        <view class="work_name">{{item.workName}}</view>
+        <view class="work_activity_level">{{item.activityLevelName}}</view>
+        <view wx:if="{{ item.enrollScoreNum == item.activityScoreNum }}" class="work_result">
+          <view>
+            <image class="image" src="../../img/icon/jiangpai.png"></image>
+            {{item.average >= item.activityPassScore ? '晋级' : '未晋级'}}
+          </view>
+          <view>
+            <image class="image" src="../../img/icon/wujiaoxing.png"></image>
+            {{item.average}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

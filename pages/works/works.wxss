@@ -1,0 +1,84 @@
+/* pages/faxian/faxian.wxss */
+.faxian {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 92rpx;
+}
+.every_data {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.data_content {
+  width: 90%;
+  height: 100%;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  /* margin: 20rpx 30rpx; */
+}
+.data_image {
+  width: 100%;
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+  margin-bottom: 0rpx;
+  /* height: 200rpx; */
+  max-height: 200rpx;
+}
+.data_text {
+  font-size: 30rpx;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.work_name {
+  margin-bottom: 1%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.work_activity_level {
+  margin-bottom: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.work_result {
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ff8c00;
+}
+.image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.level_button {
+  background-color: white;
+  position: fixed;
+  z-index: 3;
+  top: 5rpx;
+  right: 25rpx;
+  padding: 20rpx 30rpx;
+  /* border-radius: 20rpx; */
+  /* border: 1rpx solid #ccc; */
+}
+.level_list {
+  background-color: white;
+  position: fixed;
+  top: 95rpx;
+  right: 30rpx;
+  padding: 20rpx 0rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid #ccc;
+}
+.level_data {
+  padding: 10rpx 30rpx;
+}
+.level_data:active {
+  background-color: #eeeeee;
+  opacity: 1;
+}

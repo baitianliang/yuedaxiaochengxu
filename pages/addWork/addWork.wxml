@@ -1,0 +1,46 @@
+<!--pages/shezhi/shezhi.wxml-->
+<view class="top">
+  <view>上传视频</view>
+</view>
+<view class="user_setting">
+  <video 
+    id="myVideo" 
+    src="{{workContent}}" 
+    wx:if="{{workContent}}"
+    initial-time='0.01'
+  ></video>
+  <view class="delete_work" wx:if="{{workContent}}" bindtap="deleteWork">删除视频</view>
+  <view wx:else class="user_line">
+    <view class="label">作品视频</view>
+    <van-uploader class="user_avatar" file-list="{{ videoList }}" multiple accept="video" bind:beforeRead="videoBeforeRead" max-count="1" bind:after-read="videoAfterRead">
+      <view class="upload_button">
+        <image mode="aspectFit" class="upload_image" src="../../img/icon/upload.png" alt=""></image>
+      </view>
+    </van-uploader>
+  </view>
+  <view class="user_line">
+    <view class="label">作品封面</view>
+    <van-uploader class="user_avatar" file-list="{{ fileList }}" max-count="1" bind:after-read="afterRead" bind:delete="delete"/>
+  </view>
+  <view class="user_line">
+    <view class="label">演奏者姓名</view>
+    <input class="user_form" model:value="{{workTag}}" placeholder="请填写演奏者姓名" />
+  </view>
+  <view class="user_line">
+    <view class="label">作品名称</view>
+    <input class="user_form" model:value="{{workName}}" placeholder="请填写作品名称" />
+  </view>
+  <view class="user_line">
+    <view class="label">作品号</view>
+    <input class="user_form" model:value="{{workNum}}" placeholder="请填写作品号" />
+  </view>
+  <view class="user_line">
+    <view class="label">作曲家</view>
+    <input class="user_form" model:value="{{workAuthor}}" placeholder="请填写作曲家" />
+  </view>
+  <view class="user_line">
+    <view class="label">乐段乐章</view>
+    <input class="user_form" model:value="{{workArticle}}" placeholder="请填写乐段乐章" />
+  </view>
+</view>
+<button disabled="{{disabled}}" class="login_button" bindtap="updateInfo">提交资料</button>

@@ -1,0 +1,52 @@
+/* pages/saishi/saishi.wxss */
+.saishi {
+  padding-top: 112rpx;
+}
+.every_data {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  padding: 10rpx 0rpx;
+  border-bottom: 1rpx solid #ddd;
+  margin-top: 20rpx;
+}
+.activity_image {
+  height: auto;
+  max-width: 200rpx;
+  margin-left: 20rpx;
+}
+.activity_data {
+  width: 70%;
+}
+.activity_name {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 99%;
+  margin-left: 10rpx;
+}
+.activity_type {
+  color: red;
+  margin-left: 10rpx;
+}
+.activity_time {
+  color: #ccc;
+  margin-left: 10rpx;
+}
+.no_work {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.no_work_img {
+  width: 150rpx;
+  height: 150rpx;
+}
+.no_work_title {
+  margin-top: 20rpx;
+  color: #808080;
+}

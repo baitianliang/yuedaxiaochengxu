@@ -1,0 +1,17 @@
+<!--pages/xiaoxi/xiaoxi.wxml-->
+<view class="top">
+  <view>消息</view>
+</view>
+<view wx:if="{{dataList.length>0}}" class="xiaoxi">
+  <view class="message" wx:for="{{dataList}}" wx:key="index">
+    <view class="time">{{item.createTime}}</view>
+    <view class="b_b">
+      <view class="title">{{item.messageTitle}}</view>
+      <view class="content">{{item.messageContent}}</view>
+    </view>
+  </view>
+</view>
+<view class="no_work" wx:else>
+  <image class="no_work_img" src="../../img/icon/noxiaoxi.png"></image>
+  <view class="no_work_title">暂无消息通知</view>
+</view>

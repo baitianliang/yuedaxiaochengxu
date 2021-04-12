@@ -1,0 +1,67 @@
+/* pages/matchEvent/matchEvent.wxss */
+.match_event {
+  padding-top: 92rpx;
+}
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  border-top: 3rpx solid #eee;
+  top: 92rpx;
+  background-color: white;
+}
+.head_title_tag {
+  padding: 20rpx 50rpx;
+  line-height: 60rpx;
+  color: darkorange;
+  border-bottom: 5rpx solid #ee0a24;
+}
+.head_title {
+  padding: 20rpx 50rpx;
+  line-height: 60rpx;
+}
+.content {
+  width: 100%;
+  margin-top: 110rpx;
+  margin-bottom: 90rpx;
+}
+.image {
+  width: 100%;
+}
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.footer_button_apply {
+  background-color: #ff8c00;
+  border: 1rpx solid #ebedf0;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 20rpx;
+}
+.footer_button_apply:active {
+  background-color: rgb(229,125,0);
+}
+.footer_button_apply_end {
+  background-color: #ccc;
+  border: 1rpx solid #ccc;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 20rpx;
+}
+.footer_button_work {
+  border: 1rpx solid #ccc;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 25rpx;
+}
+.footer_button_work:active {
+  background-color: rgb(170, 170, 170);
+}
